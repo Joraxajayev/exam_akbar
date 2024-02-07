@@ -1,0 +1,155 @@
+.hero {
+    margin: 0 auto;
+  }
+  
+  .hero__color {
+  }
+  
+  .hero__bg {
+    max-width: 1920px;
+    margin: 0 auto;
+    background-image: url(../images/hero__bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  
+    @include mobile() {
+      background-position: center left calc(-1vw);
+    }
+  
+    @include tablet() {
+      background-position: center left calc(-53vw);
+    }
+  
+    @include media() {
+    }
+  }
+  
+  .hero__wrapper {
+    padding-top: 158px;
+    padding-bottom: 152px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  
+    @include mobile() {
+      justify-content: center;
+      align-items: center;
+      padding-top: 115px;
+      padding-bottom: 179px;
+    }
+    @include tablet() {
+      padding-top: 137px;
+      padding-bottom: 217px;
+    }
+  }
+  
+  .hero__wrapper h2 {
+    max-width: 500px;
+    color: $text_white;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 56px;
+    letter-spacing: -2.5px;
+  
+    @include tablet() {
+      max-width: 573px;
+      text-align: center;
+      margin: 0 auto;
+    }
+  
+    @include mobile() {
+      max-width: 311px;
+      text-align: center;
+      font-size: 40px;
+      line-height: 40px;
+      letter-spacing: -1.786px;
+    }
+  }
+  
+  .hero__content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: start;
+    padding-left: 95px;
+    gap: 40px;
+    background-image: url(../images/hero__strelka.svg);
+    background-repeat: no-repeat;
+    background-position: center right calc(50% - 230px);
+  
+    @include media() {
+      padding-left: 0;
+      align-items: center;
+      justify-content: center;
+      background-image: none;
+    }
+  
+    @include tablet() {
+      
+    }
+  }
+  
+  .hero__content .btn__primary {
+    @include mobile() {
+      display: block;
+    }
+  }
+  
+  .line {
+    display: none;
+    width: 700px;
+    height: 150px;
+    position: absolute;
+    top: calc(50% - 100px);
+    left: -200px;
+    background-image: url(../images/hero__strelka.svg);
+    background-repeat: no-repeat;
+    background-size: calc(450px);
+    background-position: top left calc(50% - 20px);
+  
+    @include tablet() {
+      display: block;
+      top: 200px;
+    }
+  
+    @include mobile() {
+      display: block;
+      top: 200px;
+      left: calc(50vw - 650px);
+    }
+  }
+  
+  .hero__text {
+    position: relative;
+    max-width: 405px;
+    display: flex;
+    align-items: center;
+    color: $text_white;
+    font-family: "Lexend Deca";
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25px;
+  
+    @include media() {
+      text-align: center;
+    }
+  }
+  
+  .hero__text::before {
+    content: "";
+    position: absolute;
+    top: calc(50% - 20px);
+    left: calc(50% - 670px);
+    display: flex;
+    align-items: center;
+    width: 400px;
+    height: 14px;
+    background-color: $btncolor;
+  
+    @include media() {
+      display: none;
+    }
+}
+  

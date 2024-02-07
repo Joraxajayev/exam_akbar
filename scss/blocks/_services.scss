@@ -1,0 +1,110 @@
+.services {
+    overflow-x: hidden;
+  }
+  
+  .services__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    @include media() {
+      flex-direction: column-reverse;
+      gap: 56px;
+    }
+  }
+  
+  .services__content {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 24px;
+  
+    @include media() {
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  
+  .services__content h2 {
+    max-width: 445px;
+    font-size: 48px;
+    color: $text_dark;
+    letter-spacing: -2.14px;
+    line-height: 52px;
+  
+    @include media() {
+      text-align: center;
+    }
+    @include mobile() {
+      font-size: 32px;
+      line-height: 32px;
+      letter-spacing: -1.43px;
+    }
+  }
+  
+  .services__content p {
+    max-width: 445px;
+    font-family: "Lexend Deca";
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: $text_color;
+    padding-bottom: 14px;
+  
+    @include media() {
+      text-align: center;
+    }
+  }
+  
+  .services__radio {
+    position: relative;
+    display: flex;
+  }
+  
+  .services__radio::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -130px;
+    width: 740px;
+    height: 150px;
+    display: block;
+    background-image: url(../images/strelka_ong_1.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  
+    @include mobile() {
+      left: 0;
+    }
+  }
+  
+  .services__bg {
+    position: relative;
+    width: 445px;
+    height: 445px;
+    border-radius: 50%;
+    background-image: url(../images/card__img_1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+  
+    @include mobile() {
+      width: 311px;
+      height: 311px;
+    }
+  }
+  
+  .services__bg::before {
+    content: "";
+    position: absolute;
+    right: -509px;
+    display: block;
+    width: 445px;
+    height: 445px;
+    border-radius: 50%;
+    background: #e5ecf4;
+  }
+  

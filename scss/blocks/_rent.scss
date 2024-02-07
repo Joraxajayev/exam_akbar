@@ -1,0 +1,175 @@
+.rent {
+  padding-top: 160px;
+  padding-bottom: 200px;
+
+  @include media() {
+    padding-top: 120px;
+    padding-bottom: 145px;
+  }
+
+  @include mobile() {
+    padding: 120px 0;
+  }
+}
+
+.rent__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @include tablet() {
+    justify-content: center;
+  }
+}
+
+.rent__content {
+  display: flex;
+  flex-direction: column;
+
+  @include tablet() {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.rent__list {
+  position: relative;
+  display: flex;
+  gap: 30px;
+
+  @include tablet() {
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  @include mobile() {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+  }
+}
+
+.rent__list::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: -206px;
+  width: 974px;
+  height: 15px;
+  background-color: $line_bg;
+  z-index: -1;
+
+  @include tablet() {
+    top: -100px;
+    left: -440px;
+    transform: rotate(90deg);
+  }
+
+  @include mobile() {
+    display: none;
+  }
+}
+
+.rent__list__item {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @include tablet() {
+    flex-direction: row;
+  }
+
+  @include mobile() {
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+  }
+}
+
+.phone {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background-color: $btncolor;
+  background-image: url(../images/icn__phone_1.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @include mobile() {
+    width: 56px;
+    height: 56px;
+    background-size: calc(23px);
+  }
+}
+
+.icn__scooter {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background-color: $btncolor;
+  background-image: url(../images/icn_scooter_2.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @include mobile() {
+    width: 56px;
+    height: 56px;
+    background-size: calc(23px);
+  }
+}
+
+.people_scooter {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background-color: $btncolor;
+  background-image: url(../images/icn__scooter_3.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @include mobile() {
+    width: 56px;
+    height: 56px;
+    background-size: calc(23px);
+  }
+}
+
+.rent__list__item__content {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+
+  @include mobile() {
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+  }
+}
+
+.rent__list__item__content h4 {
+  color: $text_dark;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: -1.071px;
+}
+
+.rent__list__item__content p {
+  max-width: 350px;
+  color: $text_color;
+  font-family: "Lexend Deca";
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0px;
+
+  @include tablet() {
+    max-width: 398px;
+  }
+
+  @include mobile() {
+    max-width: 350px;
+    text-align: center;
+  }
+}
